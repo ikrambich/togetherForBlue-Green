@@ -1,0 +1,51 @@
+.online-programs-page{
+    width: 100%;
+    padding-bottom: 100px;
+    background-image: url("../../assets/programBackground.jpg");
+}
+
+
+
+.titleProgramsPageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.left-lineProgramPage{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: white;
+    margin-right: 70px;
+    max-width: 410px;
+}
+
+.right-lineProgramPage{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: white;
+    max-width: 430px;
+    margin-left: 80px;
+    
+    
+}
+
+
+
+.page-title{
+    font-family: cursive;
+    font-size: 40px;
+    color:rgb(239, 232, 232)
+    
+}
+
+.programsItems{
+    margin-left: 80px;
+    width:100%;
+    max-width: 190vh;
+    ;
+}

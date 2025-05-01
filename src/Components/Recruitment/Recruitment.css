@@ -1,0 +1,168 @@
+.Recruitment-section{
+    margin-top: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+
+.RecruitmentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.left-lineRecruitment{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    margin-right: 80px;
+    max-width: 420px;
+}
+
+.right-lineRecruitment{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    max-width: 420px;
+    margin-left: 80px;
+    
+ 
+}
+
+
+
+.RecruitmentTitle{
+    font-family: cursive;
+    font-size: 40px;
+    
+}
+
+.descriptionRecruitmentSection p{
+    margin-left:75px;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Manrope";
+}
+
+
+.Recruitment-members {
+    display: flex;
+    overflow-x: auto; /* 💡 allows horizontal scroll */
+    scroll-behavior: smooth; /* optional: for smooth scroll */
+    scroll-snap-type: x mandatory; /* optional: for snapping */
+    gap: 90px;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 75px;
+    align-items: center;
+  }
+  
+  .Recruitment-scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+  
+  .Recruitmentscroll-button {
+    position: absolute;
+    background-color: #37AFE1;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    top: 40%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .Recruitmentscroll-button:hover {
+    background-color: rgb(43, 16, 199);
+  }
+  
+  .Recruitmentscroll-button.left {
+    left: 15px;
+  }
+  
+  .Recruitmentscroll-button.right {
+    right: 0;
+  }
+  
+
+  .Recruitment-members > * {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 440px; /* or whatever fixed width you use for each card */
+  }
+
+  .Recruitment-members::-webkit-scrollbar {
+    display: none;
+  }
+  .Recruitment-members {
+    scrollbar-width: none;
+  }
+  
+  @media (max-width: 768px) {
+    .Recruitment-section {
+      padding: 0 20px;
+    }
+  
+    .RecruitmentContainer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    .left-lineRecruitment,
+    .right-lineRecruitment {
+      display: none;
+    }
+  
+    .RecruitmentTitle {
+      font-size: 28px;
+    }
+  
+    .descriptionRecruitmentSection p {
+      margin-left: 0;
+      font-size: 16px;
+      text-align: center;
+      text-align: justify;
+
+      padding: 0 10px;
+    }
+  
+    .Recruitment-scroll-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Recruitment-members {
+      margin-left: 0;
+      gap: 20px;
+      padding: 10px 0;
+      scroll-snap-type: none;
+      overflow-x: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Recruitment-members > * {
+      width: 90%;
+      max-width: 350px;
+    }
+  
+    .Recruitmentscroll-button {
+      display: none;
+    }
+  }
+  

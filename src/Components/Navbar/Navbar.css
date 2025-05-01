@@ -1,0 +1,146 @@
+nav {
+    display: flex;
+    box-shadow :20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    height:fit-content;
+    width: 100%;
+    background: #37AFE1; /* slightly transparent */
+    z-index: 10 ;
+
+  }
+
+  
+  
+  ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding-right: 30px;
+  }
+  .Ngologo{
+    width:150px;
+    height: 75px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .navBarItem,.contactUs {
+    width:140px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: cursive;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: none;
+    padding: 5px 10px;
+  }
+  
+  .navBarItem:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* hover effect */
+
+    border-radius: 5px;
+    transform: scale(1.05);
+    transition: 0.5s;
+
+    cursor: pointer;
+  }
+  
+  .contactUs{
+    background: white;
+    color: black;
+    font-family: cursive;
+  }
+  .contactUs:hover{
+    background-color: rgba(255, 255, 255, 0.959); /* hover effect */
+    border-radius: 5px;
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .navBarItem a {
+    text-decoration: none;     /* Removes the underline */
+    color: white;              /* Change this to whatever text color you want */
+    font-weight: bold;
+  }
+  
+  .navBarItem a:visited {
+    color: white;              /* Ensures it doesn’t turn purple after click */
+  }
+  
+  .navBarItem a:hover {
+    color: #0077cc;            /* Optional: add a custom hover color */
+    text-decoration: none;
+  }
+  
+  .contactUs a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .contactUs a:visited {
+    color: black;
+  }
+  
+
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding-right: 30px;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding-right: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 90px;
+      right: 100;
+      bottom:0;
+      background-color: #37AFE1;
+      flex-direction: column;
+      width: 90%;
+      max-height: fit-content;
+      overflow: hidden;
+
+      transition: max-height 0.4s ease-in-out;
+    }
+  
+    .nav-links.open {
+      max-height: 100%;
+    }
+  
+    .navBarItem,
+    .contactUs {
+      width: 90%;
+      padding: 15px 20px;
+      border: none;
+      text-align: left;
+    }
+    .contactUs{
+      margin-bottom: 20px;
+ 
+    }
+  }
+  

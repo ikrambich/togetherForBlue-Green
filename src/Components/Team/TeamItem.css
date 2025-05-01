@@ -1,0 +1,79 @@
+.TeamitemWrapper {
+    width: 390.66px ;
+    height:fit-content ;
+    align-items:center;
+  }
+  
+.TeamInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.TeamItemName{
+    width: fit-content;
+    height: fit-content;
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 18px;
+    color: black; 
+    text-align: left;
+}
+.TeamItemDescription {
+    width: fit-content;
+    height: fit-content;
+    font-family: "Manrope";
+    font-weight: 400;
+    text-align: justify;
+    font-size: 16px;
+    color: black; 
+    margin-top: -5px;
+  
+}
+
+.TeamitemWrapper img{
+
+    height: 320px;
+    width: 420px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .TeamitemWrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .TeamitemWrapper img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .TeamInformation {
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .TeamItemName {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .TeamItemDescription {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}

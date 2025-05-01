@@ -1,0 +1,174 @@
+.Teams-section{
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+
+.titleTeamsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.left-lineTeam{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    margin-right: 80px;
+    max-width: 410px;
+}
+
+.right-lineTeam{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    max-width: 410px;
+    margin-left: 80px;
+    
+ 
+}
+
+
+
+.teamTitle{
+    font-family: cursive;
+    font-size: 40px;
+    
+}
+
+.descriptionTeamSection{
+    margin-left:35px;
+    margin-right:20px;
+    text-align: left;
+    font-size: 20px;
+    font-family: "Manrope";
+}
+
+.departmentList{
+    font-family: "Manrope";
+    margin-left:35px;
+    margin-bottom: 10px;
+}
+
+.team-members {
+    display: flex;
+    overflow-x: auto; /* 💡 allows horizontal scroll */
+    scroll-behavior: smooth; /* optional: for smooth scroll */
+    scroll-snap-type: x mandatory; /* optional: for snapping */
+    gap: 90px;
+    height: 450px;
+    margin-top: 10px;
+    margin-left: 75px;
+    align-items: center;
+  }
+  
+  .team-scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+  
+  .scroll-button {
+    position: absolute;
+    background-color: #37AFE1;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    top: 40%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .scroll-button:hover {
+    background-color: rgb(43, 16, 199);
+  }
+  
+  .scroll-button.left {
+    left: 15px;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+  
+
+  .team-members > * {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 300px; /* or whatever fixed width you use for each card */
+  }
+
+  .team-members::-webkit-scrollbar {
+    display: none;
+  }
+  .team-members {
+    scrollbar-width: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .team-scroll-wrapper {
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+      height: auto;
+    }
+  
+    .scroll-button {
+      display: block; /* Keep arrows visible on small screens */
+    }
+  
+    .team-members {
+      flex-direction: row;         /* Keep it horizontal */
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 0;                      /* No gap so only one card shows at a time */
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .team-members > * {
+      flex: 0 0 100%;              /* Only one card fits the screen */
+      scroll-snap-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .titleTeamsContainer {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .left-lineTeam,
+    .right-lineTeam {
+      display: none;
+    }
+  
+    .teamTitle {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .descriptionTeamSection {
+      font-size: 16px;
+      margin: 0 20px;
+      text-align: justify;
+    }
+  
+    .departmentList {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+  
