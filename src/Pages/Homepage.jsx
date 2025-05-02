@@ -13,17 +13,40 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
-      <div id="home"><Hero /></div>
-      <div id="about"><AbouUs /></div>
-      <div id="programs"><Programs /></div>
-      <div id="recruitment"><Recruitment /></div>
-      <div id="team"><Team /></div>
-      <div id="achievements"><Achievement /></div>
-      <div id="partners"><Partners /></div>
-      <div id="contact"><ContactUS /></div>
+
+      <div id="home" className="section-container">
+        <Hero />
+      </div>
+
+      <div className="section-container" id="about">
+        <AbouUs />
+      </div>
+
+      <div className="section-container" id="programs">
+        <Programs />
+      </div>
+
+      <div className="section-container" id="recruitment">
+        <Recruitment />
+      </div>
+
+      <div className="section-container" id="team">
+        <Team />
+      </div>
+
+      <div className="section-container" id="achievements">
+        <Achievement />
+      </div>
+
+      <div className="section-container" id="partners">
+        <Partners />
+      </div>
+
+      <div className="section-container" id="contact">
+        <ContactUS />
+      </div>
     </>
   );
 };
 
-
-export default Homepage
+export default Homepage;

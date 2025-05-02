@@ -1,168 +1,172 @@
-.Achievement-section{
-    margin-top: 100px;
-    width: 100%;
-    max-width: 200vh;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
+.Achievement-section {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-.AchievementContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
+.AchievementContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.left-lineAchievement{
-    opacity: 20;
-    flex: 1;
-    height: 1.5px;
-    background-color: #000000;
-    margin-right: 10px;
-    max-width: 150px;
+.left-lineAchievement,
+.right-lineAchievement {
+  opacity: 0.2;
+  flex: 1;
+  height: 1.5px;
+  background-color: #000000;
+  max-width: 150px;
 }
 
-.right-lineAchievement{
-    opacity: 20;
-    flex: 1;
-    height: 1.5px;
-    background-color: #000000;
-    max-width: 150px;
-    margin-left: 10px;
-    
- 
+.AchievementTitle {
+  font-family: cursive;
+  font-size: 40px;
+  text-align: center;
 }
 
-
-
-.AchievementTitle{
-    font-family: cursive;
-    font-size: 40px;
-    
+.descriptionAchievementSection p {
+  margin: 20px 35px;
+  margin-left: 55px;
+  font-size: 20px;
+  text-align: justify;
+  max-width: 96%;
+  font-family: "Manrope";
+  padding: 0 20px;
 }
 
-.descriptionAchievementSection p{
-    margin-left:75px;
-    text-align: left;
-    font-size: 20px;
-    text-align: justify;
-    max-width: 181vh;
-
-    font-family: "Manrope";
+.Achievement-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .Achievement-members {
-    display: flex;
-    overflow-x: auto; /* 💡 allows horizontal scroll */
-    scroll-behavior: smooth; /* optional: for smooth scroll */
-    scroll-snap-type: x mandatory; /* optional: for snapping */
-    gap: 90px;
-    height: fit-content;
-    margin-top: 10px;
-    margin-left: 75px;
-    align-items: center;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Achievement-members > * {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 400px;
+}
+
+.Achievementscroll-button {
+  position: absolute;
+  background-color: #37AFE1;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.Achievementscroll-button:hover {
+  background-color: rgb(43, 16, 199);
+}
+
+.Achievementscroll-button.left {
+  left: 15px;
+}
+
+.Achievementscroll-button.right {
+  right: 15px;
+}
+
+.Achievement-members::-webkit-scrollbar {
+  display: none;
+}
+
+.Achievement-members {
+  scrollbar-width: none;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+  .Achievement-members > * {
+    width: 300px;
   }
-  
-  .Achievement-scroll-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    overflow: hidden;
+
+  .AchievementTitle {
+    font-size: 32px;
   }
-  
-  .Achievementscroll-button {
-    position: absolute;
-    background-color: #37AFE1;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 2;
-    top: 40%;
-    transform: translateY(-50%);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 8px;
-    border-radius: 50%;
+
+  .descriptionAchievementSection p {
+    font-size: 18px;
+    max-width: 700px;
+    margin:  0 20px;
+;
   }
-  
-  .Achievementscroll-button:hover {
-    background-color: rgb(43, 16, 199);
+
+  .left-lineAchievement,
+  .right-lineAchievement {
+    max-width: 100px;
   }
-  
-  .Achievementscroll-button.left {
-    left: 15px;
+}
+
+@media (max-width: 768px) {
+  .AchievementContainer {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .Achievementscroll-button.right {
-    right: 0;
+
+  .AchievementTitle {
+    font-size: 26px;
   }
-  
+
+  .descriptionAchievementSection p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .Achievement-members {
+    gap: 10px;
+    padding: 10px;
+  }
 
   .Achievement-members > * {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    width: 440px; /* or whatever fixed width you use for each card */
+    flex: 0 0 90%;
+    width: 90%;
   }
 
-  .Achievement-members::-webkit-scrollbar {
+  .left-lineAchievement,
+  .right-lineAchievement {
     display: none;
   }
-  .Achievement-members {
-    scrollbar-width: none;
+
+  .Achievementscroll-button {
+    top: 50%;
+    padding: 6px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .Achievement-scroll-wrapper {
-      flex-direction: row;
-      align-items: center;
-      overflow: hidden;
-      height: auto;
-    }
-  
-    .Achievementscroll-button {
-      display: block; /* Make sure arrows are visible */
-    }
-  
-    .Achievement-members {
-      flex-direction: row;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      gap: 0;
-      margin-left: 0;
-      width: 100%;
-    }
-  
-    .Achievement-members > * {
-      flex: 0 0 100%;
-      scroll-snap-align: center;
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .AchievementContainer {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .left-lineAchievement,
-    .right-lineAchievement {
-      display: none;
-    }
-  
-    .AchievementTitle {
-      font-size: 26px;
-      text-align: center;
-    }
-  
-    .descriptionAchievementSection p {
-      font-size: 16px;
-      margin: 0 20px;
-    }
+}
+
+@media (max-width: 600px) {
+  .Achievement-members > * {
+    width: 100%;
+    flex: 0 0 100%;
   }
-  
+
+  .Achievementscroll-button {
+    display: none;
+  }
+}

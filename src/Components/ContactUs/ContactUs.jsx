@@ -49,7 +49,7 @@ const ContactUs = () => {
           community.
         </p>
         <p>📧 bluegreentogether@gmail.com</p>
-        <p>📍 Tizi Ouzou, Algeria · Algiers, Algeria · Boumerdas, Algeria · Blida, Algeria</p>
+        <p>📍 Algeria · Algiers </p>
         <div className="social-media">
           <a href="https://www.instagram.com/together.for.blue.and.green/?next=%2F" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""></img></a>
           <a href="https://www.facebook.com/ForBlueandGreen/" target="_blank" rel="noopener noreferrer"><img src={fcb} alt=""></img></a>

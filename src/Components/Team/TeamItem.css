@@ -42,6 +42,35 @@
     margin-top: 5px;
 }
 
+@media screen and (max-width: 1024px) {
+  .TeamitemWrapper {
+    width: 55%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .TeamitemWrapper img {
+    width: 100%;
+    max-width: 300px;
+    height: 320px;
+    border-radius: 15px;
+  }
+
+  .TeamInformation {
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .TeamItemName {
+    font-size: 17px;
+  }
+
+  .TeamItemDescription {
+    font-size: 15px;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .TeamitemWrapper {
@@ -56,7 +85,7 @@
   .TeamitemWrapper img {
     width: 100%;
     max-width: 300px;
-    height: auto;
+    height: 300px;
     border-radius: 15px;
   }
 

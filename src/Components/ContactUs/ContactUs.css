@@ -148,11 +148,92 @@
 
 }
 
-@media screen and (max-width: 768px) {
-  .contact-container {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .ContactUsContainer {
+    display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+
+  .titleContactUsContainer {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .contact-info, .contact-form {
+    flex: 1;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .contact-form form {
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    font-size: 17px;
+    padding: 15px;
+    max-width: 200px;
+  }
+
+  .social-media {
+    justify-content: flex-start;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .social-media img {
+    width: 65px;
+    transition: transform 0.3s;
+  }
+
+  .social-media img:hover {
+    transform: scale(1.1);
+  }
+
+  .ContactTitle {
+    font-size: 42px;
+  }
+
+  .left-lineContactUs, .right-lineContact {
+    max-width: 350px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .contact-container {
+    padding: 30px 40px;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
   }
 
   .contact-info {
@@ -161,34 +242,62 @@
 
   .contact-info p {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
   }
 
   .contact-form {
     width: 100%;
+    max-width: 500px;
+    align-items: center;
   }
 
-  .contact-form h3 {
-    text-align: center;
+  .contact-form form {
+    width: 100%;
   }
 
   .social-media {
     justify-content: center;
     gap: 30px;
+    margin-top: 20px;
   }
 
   .social-media img {
-    width: 60px;
+    width: 70px;
+  }
+
+  .titleContactUsContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ContactTitle {
+    font-size: 32px;
+  }
+
+  .left-lineContactUs,
+  .right-lineContact {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    gap: 40px;
   }
 
   .ContactTitle {
     font-size: 28px;
-    text-align: center;
   }
 
   .left-lineContactUs,
   .right-lineContact {
     display: none;
+  }
+
+  .social-media img {
+    width: 60px;
   }
 }

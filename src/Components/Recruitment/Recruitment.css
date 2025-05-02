@@ -1,8 +1,6 @@
 .Recruitment-section{
     margin-top: 100px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 100px;
 }
 
@@ -45,11 +43,13 @@
 }
 
 .descriptionRecruitmentSection p{
-    margin-left:75px;
+    margin-left:70px;
+    margin-right: 50px;
     text-align: left;
     font-size: 20px;
     font-family: "Manrope";
 }
+
 
 
 .Recruitment-members {
@@ -111,11 +111,105 @@
   .Recruitment-members {
     scrollbar-width: none;
   }
+  /* ✅ Mobile - up to 768px */
+@media (max-width: 768px) {
+  .RecruitmentContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .left-lineRecruitment,
+  .right-lineRecruitment {
+    display: none;
+  }
+
+  .RecruitmentTitle {
+    font-size: 26px;
+  }
+
+  .descriptionRecruitmentSection p {
+    margin: 0 20px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .Recruitment-scroll-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Recruitment-members {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    margin-left: 0;
+    scroll-snap-type: none;
+    overflow-x: visible;
+  }
+
+  .Recruitment-members > * {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .Recruitmentscroll-button {
+    display: none;
+  }
+}
+
+/* ✅ Tablet - 769px to 1024px */
+@media (max-width: 1024px) {
+  .RecruitmentContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .left-lineRecruitment,
+  .right-lineRecruitment {
+    display: none;
+  }
+
+  .RecruitmentTitle {
+    font-size: 30px;
+  }
+
+  .descriptionRecruitmentSection p {
+    margin: 0 40px;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .Recruitment-scroll-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Recruitment-members {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 0;
+    margin-left: 0;
+    scroll-snap-type: none;
+    overflow-x: visible;
+  }
+
+  .Recruitment-members > * {
+    width: 95%;
+    max-width: 420px;
+  }
+
+  .Recruitmentscroll-button {
+    display: none;
+  }
+}
+
   
   @media (max-width: 768px) {
-    .Recruitment-section {
-      padding: 0 20px;
-    }
+    
   
     .RecruitmentContainer {
       flex-direction: column;
@@ -133,13 +227,13 @@
     }
   
     .descriptionRecruitmentSection p {
-      margin-left: 0;
-      font-size: 16px;
-      text-align: center;
-      text-align: justify;
+      margin: 0 20px;
 
-      padding: 0 10px;
+      font-size: 16px;
+      text-align: justify;
     }
+
+
   
     .Recruitment-scroll-wrapper {
       flex-direction: column;
@@ -159,6 +253,53 @@
     .Recruitment-members > * {
       width: 90%;
       max-width: 350px;
+    }
+  
+    .Recruitmentscroll-button {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .RecruitmentContainer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    .left-lineRecruitment,
+    .right-lineRecruitment {
+      display: none;
+    }
+  
+    .RecruitmentTitle {
+      font-size: 32px;
+    }
+  
+    .descriptionRecruitmentSection p {
+      margin: 0 30px;
+      font-size: 18px;
+      text-align: justify;
+    }
+  
+    .Recruitment-scroll-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Recruitment-members {
+      margin-left: 0;
+      padding: 10px 0;
+      gap: 30px;
+      scroll-snap-type: none;
+      overflow-x: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Recruitment-members > * {
+      width: 95%;
+      max-width: 420px;
     }
   
     .Recruitmentscroll-button {

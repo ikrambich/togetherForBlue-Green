@@ -8,7 +8,7 @@ import OnlineProgramsPagge from './Pages/OnlineProgramsPagge';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/togetherForBlue-Green">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/online" element={<OnlineProgramsPagge />} />

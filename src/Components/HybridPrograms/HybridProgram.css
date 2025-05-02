@@ -1,7 +1,11 @@
 .hybrid-programs-page{
     width: 100%;
-    padding-bottom: 100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    box-sizing: border-box;
     background-image: url("../../assets/programBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -43,9 +47,53 @@
     
 }
 
-.HybridprogramsItems{
-    margin-left: 80px;
-    width:100%;
+.HybridprogramsItems {
+    margin-left: 30px;
+    width: 100%;
     max-width: 190vh;
-    ;
-}
+  }
+  
+  @media (max-width: 1024px) {
+    .HybridprogramsItems {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .titleHybridPageContainer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .left-lineHybridPage,
+    .right-lineHybridPage {
+      display: none;
+    }
+  
+    .Hybridpage-title {
+      font-size: 28px;
+      color: white;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Hybridpage-title {
+      font-size: 22px;
+    }
+  
+    .HybridprogramsItems {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .titleHybridPageContainer {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .left-lineHybridPage,
+    .right-lineHybridPage {
+      display: none;
+    }
+  }
+  
