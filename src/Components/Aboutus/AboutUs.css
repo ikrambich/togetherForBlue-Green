@@ -202,9 +202,12 @@
   
     .aboutDescriptionPartOne,
     .aboutDescriptionPartTwo {
-      font-size: 16px;
+      font-size: 16px; 
       margin: 0 20px;
       text-align: justify;
+      text-align: center;
+      line-height: 1.7;
+
     }
   
     .images {
