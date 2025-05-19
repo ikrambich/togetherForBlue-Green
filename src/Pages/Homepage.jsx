@@ -14,7 +14,7 @@ const Homepage = () => {
     <>
       <Navbar />
 
-      <div id="home" className="section-container">
+      <div id="home" >
         <Hero />
       </div>
 

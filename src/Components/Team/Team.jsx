@@ -4,9 +4,10 @@ import Item from "./TeamItem"
 import ikramPic from "../../assets/ikram.jpg"
 import selmaPic from "../../assets/selmaTwo.jpg"
 import aminaPic from "../../assets/amina.jpeg"
-import rayanPic from "../../assets/rayan.jpeg"
+import rayanPic from "../../assets/rayanPic2.jpeg"
 import abdouPic from "../../assets/abdou.jpeg"
 import assiaPic from "../../assets/assia.jpeg"
+import chamesedinePic from "../../assets/chamesedinePic.jpeg"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
@@ -27,7 +28,7 @@ const item_Data=[{
         {
         key:3,
         icon:assiaPic,
-        title:"Assia Benfeghoul",
+        title:"Temporary – Assia Benfeghoul",
         description:"Media & Communication Department"
             
         },
@@ -51,6 +52,13 @@ const item_Data=[{
             
             },
  
+          {
+            key:7,
+            icon:chamesedinePic,
+            title:"Mhamed Chamseddine Abdelmalek",
+            description:"Chief Marketing Officer"
+            
+            },
     ]
 
 
