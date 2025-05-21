@@ -1,0 +1,32 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #038c6a;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Responsive background image */
+.splashBackground {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain; /* Adjust to prevent distortion */
+  z-index: 1;
+}
+
+/* Optional tweak for very small screens */
+@media (max-width: 600px) {
+  .splashBackground {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+}
