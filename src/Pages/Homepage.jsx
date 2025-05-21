@@ -9,7 +9,7 @@ import Partners from "../Components/Partners/Partners"
 import Recruitment from "../Components/Recruitment/Recruitment"
 import Achievement from "../Components/Achievement/Achievement"
 import StoryTelling from "../Components/StoryTelling/StoryTelling"
-import Blogs from "../Components/Blogs/Blogs"
+import Blogs from "../Components/Blogs/Blogs.jsx"
 
 
 const Homepage = () => {
