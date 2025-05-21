@@ -1,0 +1,177 @@
+.Blogs-section {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.BlogsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-lineBlogs,
+.right-lineBlogs {
+  opacity: 0.2; 
+  height: 1.5px;
+  background-color: #0d0303;
+  flex: 1;
+}
+
+
+
+
+.BlogsTitle {
+  font-family: cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+.descriptionBlogsSection p {
+  margin: 20px 35px;
+  margin-left: 55px;
+  line-height: 1.5;
+  font-size: 20px;
+  text-align: justify;
+  max-width: 96%;
+  font-family: "Manrope";
+  padding: 0 20px;
+}
+
+.Blogs-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Blogs-members {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Blogs-members > * {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 400px;
+}
+
+.Blogsscroll-button {
+  position: absolute;
+  background-color: #37AFE1;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.Blogsscroll-button:hover {
+  background-color: rgb(43, 16, 199);
+}
+
+.Blogsscroll-button.left {
+  left: 15px;
+}
+
+.Blogsscroll-button.right {
+  right: 15px;
+}
+
+.Blogs-members::-webkit-scrollbar {
+  display: none;
+}
+
+.Blogs-members {
+  scrollbar-width: none;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+  .Blogs-members > * {
+    width: 300px;
+  }
+
+  .BlogsTitle {
+    font-size: 32px;
+  }
+
+  .descriptionBlogsSection p {
+    font-size: 18px;
+    max-width: 700px;
+    margin:  0 20px;
+;
+  }
+
+  .left-lineBlogs,
+  .right-lineBlogs {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .BlogsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .BlogsTitle {
+    font-size: 26px;
+  }
+
+  .descriptionBlogsSection p {
+    font-size: 16px;
+    padding: 0 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .Blogs-members {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .Blogs-members > * {
+    flex: 0 0 90%;
+    width: 90%;
+  }
+
+  .left-lineBlogs,
+  .right-lineBlogs {
+    display: none;
+  }
+
+  .Blogsscroll-button {
+    top: 50%;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Blogs-members > * {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .Blogsscroll-button {
+    display: none;
+  }
+}
+

@@ -25,7 +25,7 @@ const Programs = () => {
         <div className="program">
           <Link to="/offline">
             <img src={offline} alt="Offline Programs" className="offline" />
-            <p>🏛️ Offline Programs</p>
+            <p>🏛️ In-person Programs</p>
           </Link>
         </div>
 

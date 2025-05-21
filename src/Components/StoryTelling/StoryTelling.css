@@ -1,0 +1,315 @@
+.StoryTelling-section{
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+
+.StoryTellingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.left-lineStoryTelling{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    margin-right: 80px;
+    max-width: 420px;
+}
+
+.right-lineStoryTelling{
+    opacity: 20;
+    flex: 1;
+    height: 1.5px;
+    background-color: #000000;
+    max-width: 420px;
+    margin-left: 80px;
+    
+ 
+}
+
+
+
+.StoryTellingTitle{
+    font-family: cursive;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.descriptionStoryTellingSection p{
+    margin-left:70px;
+    margin-right: 50px;
+    line-height: 1.5;
+
+    text-align: left;
+    font-size: 20px;
+    font-family: "Manrope";
+}
+
+
+
+.StoryTelling-members {
+    display: flex;
+    overflow-x: auto; /* 💡 allows horizontal scroll */
+    scroll-behavior: smooth; /* optional: for smooth scroll */
+    scroll-snap-type: x mandatory; /* optional: for snapping */
+    gap: 90px;
+
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 575px;
+    align-items: center;
+  }
+  
+  .StoryTelling-scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+
+
+  
+  .StoryTellingscroll-button {
+    position: absolute;
+    background-color: #37AFE1;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    top: 40%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .StoryTellingscroll-button:hover {
+    background-color: rgb(43, 16, 199);
+  }
+  
+  .StoryTellingscroll-button.left {
+    left: 15px;
+  }
+  
+  .StoryTellingscroll-button.right {
+    right: 0;
+  }
+  
+
+  .StoryTelling-members > * {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 440px; /* or whatever fixed width you use for each card */
+  }
+
+  .StoryTelling-members::-webkit-scrollbar {
+    display: none;
+  }
+  .StoryTelling-members {
+    scrollbar-width: none;
+  }
+  /* ✅ Mobile - up to 768px */
+@media (max-width: 768px) {
+  .StoryTellingContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .left-lineStoryTelling,
+  .right-lineStoryTelling {
+    display: none;
+  }
+
+  .StoryTellingTitle {
+    font-size: 26px;
+  }
+
+  .descriptionStoryTellingSection p {
+    margin: 0 20px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .StoryTelling-scroll-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .StoryTelling-members {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    margin-left: 0;
+    scroll-snap-type: none;
+    overflow-x: visible;
+  }
+
+  .StoryTelling-members > * {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .StoryTellingscroll-button {
+    display: none;
+  }
+}
+
+/* ✅ Tablet - 769px to 1024px */
+@media (max-width: 1024px) {
+  .StoryTellingContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .left-lineStoryTelling,
+  .right-lineStoryTelling {
+    display: none;
+  }
+
+  .StoryTellingTitle {
+    font-size: 30px;
+  }
+
+  .descriptionStoryTellingSection p {
+    margin: 0 40px;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .StoryTelling-scroll-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .StoryTelling-members {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 0;
+    margin-left: 0;
+    scroll-snap-type: none;
+    overflow-x: visible;
+  }
+
+  .StoryTelling-members > * {
+    width: 95%;
+    max-width: 420px;
+  }
+
+  .StoryTellingscroll-button {
+    display: none;
+  }
+}
+
+  
+  @media (max-width: 768px) {
+    
+  
+    .StoryTellingContainer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    .left-lineStoryTelling,
+    .right-lineStoryTelling {
+      display: none;
+    }
+  
+    .StoryTellingTitle {
+      font-size: 28px;
+    }
+  
+    .descriptionStoryTellingSection p {
+      margin: 0 20px;
+
+      font-size: 16px;
+      text-align: justify;
+    }
+
+
+  
+    .StoryTelling-scroll-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .StoryTelling-members {
+      margin-left: 0;
+      gap: 20px;
+      padding: 10px 0;
+      scroll-snap-type: none;
+      overflow-x: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .StoryTelling-members > * {
+      width: 90%;
+      max-width: 350px;
+    }
+  
+    .StoryTellingscroll-button {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .StoryTellingContainer {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    .left-lineStoryTelling,
+    .right-lineStoryTelling {
+      display: none;
+    }
+  
+    .StoryTellingTitle {
+      font-size: 32px;
+    }
+  
+    .descriptionStoryTellingSection p {
+      margin: 0 30px;
+      font-size: 18px;
+      text-align: justify;
+    }
+  
+    .StoryTelling-scroll-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .StoryTelling-members {
+      margin-left: 0;
+      padding: 10px 0;
+      gap: 30px;
+      scroll-snap-type: none;
+      overflow-x: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .StoryTelling-members > * {
+      width: 95%;
+      max-width: 420px;
+    }
+  
+    .StoryTellingscroll-button {
+      display: none;
+    }
+  }
+  

@@ -8,6 +8,9 @@ import ContactUS from "../Components/ContactUs/ContactUs"
 import Partners from "../Components/Partners/Partners"
 import Recruitment from "../Components/Recruitment/Recruitment"
 import Achievement from "../Components/Achievement/Achievement"
+import StoryTelling from "../Components/StoryTelling/StoryTelling"
+import Blogs from "../Components/Blogs/Blogs"
+
 
 const Homepage = () => {
   return (
@@ -28,6 +31,14 @@ const Homepage = () => {
 
       <div className="section-container" id="recruitment">
         <Recruitment />
+      </div>
+
+      <div className="section-container" id="StoryTelling">
+        <StoryTelling />
+      </div>
+
+       <div className="section-container" id="Blogs">
+        <Blogs />
       </div>
 
       <div className="section-container" id="team">

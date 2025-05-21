@@ -42,6 +42,21 @@
     margin-top: 5px;
 }
 
+.TeamItemDescription a {
+  color: #37AFE1; /* Your signature blue */
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.TeamItemDescription a:hover {
+  color: #2a87c7; /* Darker on hover */
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 1024px) {
   .TeamitemWrapper {
     width: 55%;

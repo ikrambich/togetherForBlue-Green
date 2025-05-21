@@ -9,7 +9,7 @@ const TeamItem = (props) => {
         </div>
         <div className="TeamInformation">
             <p className="TeamItemName" >{props.title}</p>
-            <p className="TeamItemDescription"> {props.description}</p>
+            <p className="TeamItemDescription" dangerouslySetInnerHTML={{ __html: props.description }}></p>
         </div>
 
 
