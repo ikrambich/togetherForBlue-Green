@@ -2,7 +2,7 @@ import React ,{ useRef } from 'react'
 import "./StoryTelling.css"
 import Item from "../Team/TeamItem"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import stayTuned from "../../assets/stayTuned3.gif"
+import stayTuned from "../../assets/staytuned3.gif"
 
 
 
