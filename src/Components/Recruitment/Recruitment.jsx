@@ -8,7 +8,7 @@ const item_Data=[{
     key:1,
     icon:LcoyPic,
     title:"🌱 LCOY Algeria 2025 – Local Conference of Youth",
-    description:"Together for Blue and Green is proud to host Algeria’s official youth climate conference ahead of COP30. LCOY Algeria 2025 will bring together young people from across the country to co-create solutions, influence national climate policies. Stay tuned!<br/><br/><a href='https://docs.google.com/forms/d/e/1FAIpQLScuGeitSCID3ArNCmmJKwOVOGrMVEfurYg3NhEDcrZVlvAbMA/viewform' >📢 Call for Partners & Speaker</a><br/><a href='#' onClick='event.preventDefault()'>🧑‍🤝‍🧑 Call for Delegates</a>"
+    description:"Together for Blue and Green is proud to host Algeria’s official youth climate conference ahead of COP30. LCOY Algeria 2025 will bring together young people from across the country to co-create solutions, influence national climate policies. Stay tuned!<br/><br/><a href='https://drive.google.com/file/d/1ae5zY70pk12ZXtFtkd-7AkQx2aAidu5k/view?fbclid=PARlRTSANY1LxleHRuA2FlbQIxMQABp35l2xkpAi3GHeZtR6cOPnnW2DT5txDufASpC7XECRpxWm9DwvZZfw-oLQ5k_aem_9cG8KDqRJ24pkby9MB9TYw' >📢 Check Algeria's Youth Statement 2025</a>"
     },
 
 ]
