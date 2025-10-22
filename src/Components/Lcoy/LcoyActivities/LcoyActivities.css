@@ -168,9 +168,11 @@
 }
 
 /* ===== Tablets / small laptops ≤1024px ===== */
-@media (max-width: 1024px) {
-  .lcoyActivitiesTitle { padding: 0 2rem; }
+@media (min-width: 800px) and  (max-width: 1024px) {
+  .lcoyActivitiesTitle { padding: 0 2rem; ;
+ }
   .partOneLcoyActivity,
+  
   .partTwoLcoyActivity { font-size: 2.4rem; letter-spacing: 1px; }
   .partTwoLcoyActivity::after { width: 58%; bottom: -8px; }
   .activitiesGrid { gap: 2.5rem; }
@@ -180,14 +182,13 @@
 
 /* ===== Mobile stack (enhanced) ≤860px ===== */
 /* Your existing ≤860px stack remains — adding small refinements */
-@media (max-width: 860px) {
+@media (min-width: 600px) and  (max-width: 800px) {
   .LcoyActivities { padding: 4rem 1.25rem; }
-
   .lcoyActivitiesTitle {
     padding: 0 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    gap: .6rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -196,27 +197,31 @@
     font-size: 2rem;
   }
   .partTwoLcoyActivity::after {
-    width: 52%;
+    width: 80%;
     height: 3px;
     bottom: -6px;
   }
 
   .activitiesGrid { gap: 2rem; }
 
-  .content { padding-top: 1.5rem; }
+  .content { padding-top: 0rem;   }
   .body {
-    max-width: 60ch;
-    font-size: 1.05rem;
+    max-width: 180px;
+    width: 100%;
+    font-size: 1rem;
   }
 }
 
 /* ===== Small phones ≤480px ===== */
-@media (max-width: 480px) {
-  .LcoyActivities { padding: 3.5rem 1rem; }
+@media (max-width: 600px) {
+  .LcoyActivities { padding: 3.5rem 1rem;
+ }
   .partOneLcoyActivity,
   .partTwoLcoyActivity { font-size: 1.7rem; }
+  .content { padding-top: 0rem;   }
+
   .partTwoLcoyActivity::after { width: 60%; }
-  .body { font-size: 1rem; line-height: 1.65; }
+  .body { font-size: 0.85rem; line-height: 1.65; }
   .activitiesGrid { gap: 1.6rem; }
 }
 
@@ -225,5 +230,7 @@
   .partOneLcoyActivity,
   .partTwoLcoyActivity { font-size: 1.55rem; }
   .partTwoLcoyActivity::after { width: 66%; }
-  .body { font-size: 0.95rem; }
+  .content { padding-top: 0rem;   }
+
+  .body { font-size: 0.8rem; }
 }
