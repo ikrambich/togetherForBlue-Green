@@ -2,7 +2,7 @@ import React from "react";
 import "./LcoyActivities.css";
 import ActivityCard from "./ActivityCard";
 
-import imgWorkshops from "../../../assets/Workshops.jpg";
+import imgWorkshops from "../../../assets/workshops.jpg";
 import imgPanels from "../../../assets/pannels.jpg";     // <- check name
 import imgBooths from "../../../assets/booth.jpg";
 import imgNetworking from "../../../assets/networking.jpg";
