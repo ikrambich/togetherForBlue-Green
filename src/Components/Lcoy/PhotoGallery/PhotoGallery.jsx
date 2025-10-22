@@ -2,14 +2,14 @@
 import React from "react";
 import "./PhotoGallery.css";
 
-import gal1 from "../../../assets/gal1.jpg";
-import gal2 from "../../../assets/gal2.jpg";
-import gal3 from "../../../assets/gal3.jpg";
-import gal4 from "../../../assets/gal4.jpg";
-import gal5 from "../../../assets/gal5.jpg";
-import gal6 from "../../../assets/gal6.jpg";
-import gal7 from "../../../assets/gal7.jpg";
-import gal8 from "../../../assets/gal8.jpg";
+import gal1 from "../../../assets/gal1.JPG";
+import gal2 from "../../../assets/gal2.JPG";
+import gal3 from "../../../assets/gal3.JPG";
+import gal4 from "../../../assets/gal4.JPG";
+import gal5 from "../../../assets/gal5.JPG";
+import gal6 from "../../../assets/gal6.JPG";
+import gal7 from "../../../assets/gal7.JPG";
+import gal8 from "../../../assets/gal8.JPG";
 
 
 const IMAGES = [gal1, gal2, gal3, gal4, gal5, gal6, gal7,gal8];
