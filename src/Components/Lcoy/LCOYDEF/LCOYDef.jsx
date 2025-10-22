@@ -1,5 +1,5 @@
 import React from 'react';
-import "./LCOYDEF.css";
+import "./LCOYDef.css";
 import introLcoy from "../../../assets/introLcoy.png";
 
 const LCOYDef = () => {
