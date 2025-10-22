@@ -1,0 +1,69 @@
+/* ---------- Section ---------- */
+.pgSection {
+  background: #f8fafc;                 /* soft neutral background */
+  padding: 3rem 1.25rem;
+}
+
+/* Title */
+.pgTitle {
+  position: relative;                    /* keeps ::after anchored to this title */
+  text-align: center;
+  font-weight: 900;
+  color: #37AFE1;                        /* deep blue */
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 2.5rem;                 /* spacing for the underline */
+}
+
+/* Underline accent */
+.pgTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;                         /* positions the line just below text */
+  transform: translateX(-50%);
+  width: 30%;                            /* shorter looks cleaner */
+  height: 4px;
+  background: linear-gradient(90deg, #ff7a00, #00c3ff);
+  border-radius: 2px;
+}
+
+
+/* ---------- Gallery Grid ---------- */
+.pgGrid {
+  max-width: 1200px;                    /* keep gallery “normal” width */
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;                            /* spacing between tiles */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-items: center;                /* center tiles inside cells */
+  padding: 0 .25rem;
+  background: transparent;
+}
+
+/* ---------- Tiles / Images ---------- */
+.pgItem {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e9eef6;                  /* subtle placeholder while loading */
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.pgItem img {
+  width: 100%;
+  height: 270px;                        /* uniform tile height */
+  object-fit: cover;                    /* crop nicely without distortion */
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.pgItem img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 520px) {
+  .pgGrid { gap: 10px; }
+  .pgItem img { height: 190px; }
+}

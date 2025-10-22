@@ -1,64 +1,73 @@
-import React ,{ useRef } from 'react'
-import "./Recruitment.css"
-import Item from "../Team/TeamItem"
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";            // ⬅️ add this
+import "./Recruitment.css";
+import Item from "../Team/TeamItem";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import LcoyPic from "../../assets/lcoyEd2.jpg"
+import LcoyPic from "../../assets/lcoyEd2.jpg";
 
-const item_Data=[{
-    key:1,
-    icon:LcoyPic,
-    title:"🌱 LCOY Algeria 2025 – Local Conference of Youth",
-    description:"Together for Blue and Green is proud to host Algeria’s official youth climate conference ahead of COP30. LCOY Algeria 2025 will bring together young people from across the country to co-create solutions, influence national climate policies. Stay tuned!<br/><br/><a href='https://drive.google.com/file/d/1ae5zY70pk12ZXtFtkd-7AkQx2aAidu5k/view?fbclid=PARlRTSANY1LxleHRuA2FlbQIxMQABp35l2xkpAi3GHeZtR6cOPnnW2DT5txDufASpC7XECRpxWm9DwvZZfw-oLQ5k_aem_9cG8KDqRJ24pkby9MB9TYw' >📢 Check Algeria's Youth Statement 2025</a>"
-    },
+const item_Data = [
+  {
+    key: 1,
+    icon: LcoyPic,
+    title: "🌱 LCOY Algeria 2025 – Local Conference of Youth",
+    description:
+      "Together for Blue and Green is proud to host Algeria’s official youth climate conference ahead of COP30. LCOY Algeria 2025 will bring together young people from across the country to co-create solutions, influence national climate policies. Stay tuned!<br/><br/><a href='https://drive.google.com/file/d/1ae5zY70pk12ZXtFtkd-7AkQx2aAidu5k/view?fbclid=PARlRTSANY1LxleHRuA2FlbQIxMQABp35l2xkpAi3GHeZtR6cOPnnW2DT5txDufASpC7XECRpxWm9DwvZZfw-oLQ5k_aem_9cG8KDqRJ24pkby9MB9TYw' target='_blank' rel='noreferrer noopener'>📢 Check Algeria's Youth Statement 2025</a>",
+  },
+];
 
-]
 const Recruitment = () => {
-   
-    const scrollRef = useRef(null);
-    
-    const scroll = (direction) => {
-        const { current } = scrollRef;
-        const cardWidth = current.firstChild.offsetWidth + 40; // 40 is the gap
-          
-        if (direction === "left") {
-            current.scrollBy({ left: -cardWidth, behavior: "smooth" });
-        } else {
-            current.scrollBy({ left: cardWidth, behavior: "smooth" });
-        }};
-    return (
-        <div className="Recruitment-section">
-                <div className="RecruitmentContainer">
-                    <hr className='left-lineRecruitment'></hr>
-                    <h1 className="RecruitmentTitle">📢 Open Programs</h1>
-                    <hr className='right-lineRecruitment'></hr> 
-                </div>
+  const scrollRef = useRef(null);
 
-                <div className="descriptionRecruitmentSection">
-                    <p >
-                    Discover our current open calls, campaigns, and youth opportunities. Stay engaged and be part of the change — whether it's through workshops, conferences, or digital programs.
-                    </p>
-                 </div>
-                <div className="Recruitment-scroll-wrapper">
-                <button className="Recruitmentscroll-button left" onClick={() => scroll("left")}>
-                <FaChevronLeft />
-                </button>
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (!current || !current.firstChild) return;
+    const cardWidth = current.firstChild.offsetWidth + 40; // 40 is the gap
+    current.scrollBy({
+      left: direction === "left" ? -cardWidth : cardWidth,
+      behavior: "smooth",
+    });
+  };
 
-    
-                 <div className="Recruitment-members" ref={scrollRef}>
-
-                    
-                        {item_Data.map((item,i)=>{
-                            return < Item key={i} icon={item.icon} title={item.title} description={item.description} />
-
-                        })}
-                </div>
-                <button className="Recruitmentscroll-button right" onClick={() => scroll("right")}>
-                <FaChevronRight />
-                </button>
+  return (
+    <div className="Recruitment-section">
+      <div className="RecruitmentContainer">
+        <hr className="left-lineRecruitment" />
+        <h1 className="RecruitmentTitle">📢 Open Programs</h1>
+        <hr className="right-lineRecruitment" />
       </div>
-          
-        </div>
-        )
-        }
 
-export default Recruitment
+      <div className="descriptionRecruitmentSection">
+        <p>
+          Discover our current open calls, campaigns, and youth opportunities.
+          Stay engaged and be part of the change — whether it's through
+          workshops, conferences, or digital programs.
+        </p>
+      </div>
+
+      <div className="Recruitment-scroll-wrapper">
+        <button className="Recruitmentscroll-button left" onClick={() => scroll("left")}>
+          <FaChevronLeft />
+        </button>
+
+        <div className="Recruitment-members" ref={scrollRef}>
+          {item_Data.map((item, i) => (
+            /* Wrap the whole card with a Link so clicking title (or the card) goes to /lcoy */
+            <Link
+              to="/lcoy"
+              key={i}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Item icon={item.icon} title={item.title} description={item.description} />
+            </Link>
+          ))}
+        </div>
+
+        <button className="Recruitmentscroll-button right" onClick={() => scroll("right")}>
+          <FaChevronRight />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Recruitment;

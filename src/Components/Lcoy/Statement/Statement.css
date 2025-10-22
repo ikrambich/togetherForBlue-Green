@@ -1,0 +1,129 @@
+/* ===== Your existing desktop/base styles (unchanged) ===== */
+.statementSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.titleStatment {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0c0c81;
+  margin-bottom: 2rem;
+}
+
+.statementSection .mainImage {
+  width: 60%;
+  height: 70vh;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.statementSection .seperator {
+  background-color: transparent;
+  width: 60%;
+  max-width: 850px;
+  margin-top: 5rem;
+}
+
+.buttonsStatement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.NYSButton,
+.instagramButton {
+  background-color: #ff7a00;
+  border: none;
+  color: #ffffff;
+  border: 2px solid #0c0c81;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  width: 60%;
+  max-width: 500px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.instagramButton {
+  background-color: transparent;
+  border: 2px solid #0c0c81;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  color: #0c0c81;
+}
+
+.NYSButton:hover,
+.instagramButton:hover {
+  background-color: #ff9f40;
+  transform: translateY(-3px);
+}
+
+/* ===== Big Screens >1920px ===== */
+@media (min-width: 1921px) {
+  .titleStatment { font-size: 3rem; }
+  .statementSection .mainImage { width: 50%; height: 75vh; }
+  .NYSButton, .instagramButton { font-size: 1.1rem; width: 40%; }
+}
+
+/* ===== Laptops/Tablets (<=1024px) ===== */
+@media (max-width: 1024px) {
+  .titleStatment { font-size: 2.2rem; }
+  .statementSection { padding: 3rem 1.5rem; }
+
+  .statementSection .mainImage {
+    width: 70%;
+    height: 60vh;
+  }
+
+  .statementSection .seperator { width: 75%; }
+
+  .NYSButton, .instagramButton {
+    width: 70%;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Phones (<=768px) ===== */
+@media (max-width: 768px) {
+  .titleStatment {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .statementSection {
+    padding: 3rem 1rem;
+  }
+
+  .statementSection .mainImage {
+    width: 85%;
+    height: auto;
+  }
+
+  .statementSection .seperator {
+    width: 85%;
+    margin-top: 3rem;
+  }
+
+  .NYSButton, .instagramButton {
+    width: 85%;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+}
+
+/* ===== Very Small Phones (<=400px) ===== */
+@media (max-width: 400px) {
+  .titleStatment { font-size: 1.6rem; }
+  .statementSection .mainImage { width: 90%; }
+  .NYSButton, .instagramButton {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+}

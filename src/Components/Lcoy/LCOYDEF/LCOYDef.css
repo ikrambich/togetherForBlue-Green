@@ -1,0 +1,107 @@
+/* ===== Your existing desktop/base styles (unchanged) ===== */
+.LcoyDef {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 10rem;
+  gap: 8rem;
+  flex-wrap: wrap; /* keeps it responsive */
+}
+
+/* TEXT SECTION */
+.textLcoyDef {
+  flex: 1.2;
+  min-width: 500px;
+}
+
+.titleLcoyDef {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #37AFE1; /* your LCOY color */
+  margin-bottom: 1.5rem;
+}
+
+.paragraphLcoyDef {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 600px;
+}
+
+.newsLcoyDef {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c0c81;
+  line-height: 1.7;
+}
+
+/* IMAGE SECTION */
+.imgLcoyDef {
+  flex: 1.2;
+  min-width: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.imgLcoyDef .lcoyGrpPic {
+  width: 100%;
+  max-width: 800px;
+  background-color: transparent;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/* ===== Ultra-wide screens >1920px ===== */
+@media (min-width: 1921px) {
+  .LcoyDef { padding: 0 12rem; gap: 10rem; }
+  .titleLcoyDef { font-size: 3.4rem; }
+  .paragraphLcoyDef, .newsLcoyDef { font-size: 1.3rem; }
+  .imgLcoyDef .lcoyGrpPic { max-width: 900px; }
+}
+
+/* ===== Large laptops / small desktops ≤1280px ===== */
+@media (max-width: 1280px) {
+  .LcoyDef { padding: 0 6rem; gap: 5rem; }
+  .textLcoyDef { min-width: 420px; }
+  .titleLcoyDef { font-size: 2.6rem; }
+  .paragraphLcoyDef, .newsLcoyDef { font-size: 1.1rem; }
+  .imgLcoyDef .lcoyGrpPic { max-width: 700px; }
+}
+
+/* ===== Tablets / landscape phones ≤1024px ===== */
+@media (max-width: 1024px) {
+  .LcoyDef {
+    padding: 0 3rem;
+    gap: 3rem;
+    justify-content: center;      /* center columns when wrapping */
+  }
+  .textLcoyDef,
+  .imgLcoyDef {
+    flex: 1 1 100%;               /* stack to full width */
+    min-width: 0;                 /* override large min-widths */
+  }
+  .textLcoyDef { text-align: center; }
+  .titleLcoyDef { font-size: 2.2rem; }
+  .paragraphLcoyDef, .newsLcoyDef { margin: 0 auto; max-width: 650px; }
+  .imgLcoyDef .lcoyGrpPic { max-width: 640px; border-radius: 1.6rem; }
+}
+
+/* ===== Phones ≤768px ===== */
+@media (max-width: 768px) {
+  .LcoyDef { padding: 0 1.5rem; gap: 2rem; }
+  .titleLcoyDef { font-size: 2rem; margin-bottom: 1.2rem; }
+  .paragraphLcoyDef { font-size: 1rem; }
+  .newsLcoyDef { font-size: 1.05rem; }
+  .imgLcoyDef { min-width: 0; }
+  .imgLcoyDef .lcoyGrpPic { max-width: 100%; border-radius: 1.2rem; }
+}
+
+/* ===== Small phones ≤480px ===== */
+@media (max-width: 480px) {
+  .LcoyDef { padding: 0 1rem; gap: 1.5rem; }
+  .titleLcoyDef { font-size: 1.7rem; }
+  .paragraphLcoyDef { font-size: 0.95rem; }
+  .newsLcoyDef { font-size: 0.98rem; }
+  .imgLcoyDef .lcoyGrpPic { border-radius: 1rem; }
+}

@@ -1,0 +1,71 @@
+/* ===== Your existing desktop/base styles (unchanged) ===== */
+.HeroLcoyContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* video behind */
+}
+
+.textLcoy {
+  position: relative;
+  z-index: 1; /* text on top */
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 0 20px;
+}
+
+.heroLcoyTitle {
+  font-size: 3.1rem;
+  font-weight: bold;
+}
+
+.heroLcoySubheadline {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+/* ===== Optional: very large screens (>1920px) ===== */
+@media (min-width: 1921px) {
+  .heroLcoyTitle { font-size: 3.6rem; }
+  .heroLcoySubheadline { font-size: 1.6rem; }
+}
+
+/* ===== Laptops/Tablets (<=1024px) ===== */
+@media (max-width: 1024px) {
+  /* keep full-screen height so vertical centering still works */
+  .HeroLcoyContainer { height: 100vh; }
+
+  .textLcoy { padding: 0 28px; }
+
+  .heroLcoyTitle { font-size: 2.6rem; }
+  .heroLcoySubheadline { font-size: 1.25rem; }
+}
+
+/* ===== Phones (<=768px) ===== */
+@media (max-width: 768px) {
+  /* keep center alignment with the same top/translate setup */
+  .HeroLcoyContainer { height: 100vh; }
+
+  .textLcoy { padding: 0 24px; }
+
+  .heroLcoyTitle { font-size: 2.1rem; }
+  .heroLcoySubheadline { font-size: 1.1rem; }
+}
+
+/* ===== Ultra-small phones (<=360px) — optional safety net ===== */
+@media (max-width: 360px) {
+  .heroLcoyTitle { font-size: 1.9rem; }
+  .heroLcoySubheadline { font-size: 1rem; }
+}

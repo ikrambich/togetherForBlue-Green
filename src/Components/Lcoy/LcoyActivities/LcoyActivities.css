@@ -1,0 +1,229 @@
+.LcoyActivities {
+  color:#fff;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  padding:6rem 2rem;
+}
+
+/* Title container */
+.lcoyActivitiesTitle {
+  display:flex;
+  gap:1rem;
+  padding: 0 8rem ;
+  margin-bottom: 2rem;
+}
+
+/* Title parts */
+.partOneLcoyActivity {
+  font-size:3rem;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#37AFE1;
+}
+.partTwoLcoyActivity {
+  font-size:3rem;
+  font-weight:900;
+  color:#ff7a00;
+  letter-spacing:2px;
+  position:relative;
+}
+.partTwoLcoyActivity::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-10px;
+  transform:translateX(-50%);
+  width:70%;
+  height:4px;
+  background:linear-gradient(90deg,#37AFE1,#00c3ff);
+  border-radius:2px;
+}
+
+/* --- GRID to hold cards --- */
+.activitiesGrid{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  gap:4rem;
+}
+
+/* CARD LAYOUT: image | text */
+.activityCard{
+  display:grid;
+  gap:2rem;
+  grid-template-columns: minmax(260px,520px) 1fr; /* image | content */
+  grid-template-areas: "media content";
+}
+
+/* flip sides for right-aligned cards */
+.activityCard.right{
+  grid-template-columns: 1fr minmax(260px,520px); /* content | image */
+  grid-template-areas: "content media";
+}
+
+/* MEDIA (image) */
+.mediaWrap{
+  grid-area: media;
+  position:relative;
+  width:100%;
+}
+.mediaWrap img{
+  width:100%;
+  display:block;
+  border-radius:12px;
+}
+
+/* CONTENT (label + paragraph) */
+.content{
+  grid-area: content;
+  padding-top: 5rem;
+
+  text-align:left;
+}
+.activityCard.right .content{
+  text-align:right;
+
+}
+
+/* LABEL (title pill) */
+.label{
+  display:inline-block;
+  padding:.6rem 1rem;
+  border-radius:8px;
+  font-weight:800;
+  font-size:clamp(1rem,2.2vw,1.4rem);
+  color:#fff;
+  background:#0c5c85;          /* override per card inline if needed */
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  margin-bottom:1rem;
+}
+
+/* BODY TEXT */
+.body{
+  max-width:48ch;               /* nice readable width */
+  line-height:1.7;
+  color:black;
+  font-size:1.5rem;
+  margin:0;                     /* no extra margins needed now */
+}
+
+/* REVEAL ANIMATION (works with your Framer or CSS fallback) */
+.reveal{
+  opacity:0;
+  transform:translateX(var(--from,-60px));
+  transition:opacity .6s ease-out, transform .6s ease-out;
+  will-change:opacity, transform;
+}
+.reveal.show{ opacity:1; transform:translateX(0); }
+
+/* ===== Ultra-wide screens >1920px ===== */
+@media (min-width: 1921px) {
+  .LcoyActivities { padding: 7rem 3rem; }
+  .lcoyActivitiesTitle { padding: 0 10rem; gap: 1.25rem; }
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity { font-size: 3.4rem; }
+  .activitiesGrid { max-width: 1300px; gap: 5rem; }
+  .body { font-size: 1.6rem; }
+}
+
+/* ===== Large desktops 1441–1920px ===== */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .lcoyActivitiesTitle { padding: 0 9rem; }
+  .activitiesGrid { max-width: 1200px; gap: 4.5rem; }
+}
+
+/* ===== Desktops / laptops ≤1440px ===== */
+@media (max-width: 1440px) {
+  .lcoyActivitiesTitle { padding: 0 6rem; }
+  .activitiesGrid { max-width: 1100px; gap: 3.5rem; }
+  .activityCard,
+  .activityCard.right {
+    grid-template-columns: minmax(240px, 480px) 1fr;
+  }
+  .activityCard.right {
+    grid-template-columns: 1fr minmax(240px, 480px);
+  }
+  .content { padding-top: 4rem; }
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity { font-size: 2.8rem; }
+  .body { font-size: 1.35rem; }
+}
+
+/* ===== Medium screens ≤1200px ===== */
+@media (max-width: 1200px) {
+  .LcoyActivities { padding: 5rem 2rem; }
+  .lcoyActivitiesTitle { padding: 0 4rem; }
+  .activitiesGrid { gap: 3rem; }
+  .activityCard,
+  .activityCard.right {
+    grid-template-columns: minmax(220px, 440px) 1fr;
+  }
+  .activityCard.right {
+    grid-template-columns: 1fr minmax(220px, 440px);
+  }
+  .partTwoLcoyActivity::after { width: 64%; }
+  .content { padding-top: 3.5rem; }
+  .body { font-size: 1.25rem; }
+}
+
+/* ===== Tablets / small laptops ≤1024px ===== */
+@media (max-width: 1024px) {
+  .lcoyActivitiesTitle { padding: 0 2rem; }
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity { font-size: 2.4rem; letter-spacing: 1px; }
+  .partTwoLcoyActivity::after { width: 58%; bottom: -8px; }
+  .activitiesGrid { gap: 2.5rem; }
+  .content { padding-top: 3rem; }
+  .body { font-size: 1.15rem; }
+}
+
+/* ===== Mobile stack (enhanced) ≤860px ===== */
+/* Your existing ≤860px stack remains — adding small refinements */
+@media (max-width: 860px) {
+  .LcoyActivities { padding: 4rem 1.25rem; }
+
+  .lcoyActivitiesTitle {
+    padding: 0 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity {
+    font-size: 2rem;
+  }
+  .partTwoLcoyActivity::after {
+    width: 52%;
+    height: 3px;
+    bottom: -6px;
+  }
+
+  .activitiesGrid { gap: 2rem; }
+
+  .content { padding-top: 1.5rem; }
+  .body {
+    max-width: 60ch;
+    font-size: 1.05rem;
+  }
+}
+
+/* ===== Small phones ≤480px ===== */
+@media (max-width: 480px) {
+  .LcoyActivities { padding: 3.5rem 1rem; }
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity { font-size: 1.7rem; }
+  .partTwoLcoyActivity::after { width: 60%; }
+  .body { font-size: 1rem; line-height: 1.65; }
+  .activitiesGrid { gap: 1.6rem; }
+}
+
+/* ===== Very small phones ≤360px (safety) ===== */
+@media (max-width: 360px) {
+  .partOneLcoyActivity,
+  .partTwoLcoyActivity { font-size: 1.55rem; }
+  .partTwoLcoyActivity::after { width: 66%; }
+  .body { font-size: 0.95rem; }
+}

@@ -1,0 +1,111 @@
+/* VideoTestimonials.css */
+.vtSection{
+  padding: 3.5rem 1.25rem;
+  text-align: center;
+  background: #fff;
+  color: #111;
+}
+
+.vtTitle {
+  position: relative;            /* needed for ::after to align under this */
+  padding: 3rem 10rem;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ff7a00;                /* your brand orange */
+}
+
+
+.highlightWord {
+  color: #37AFE1; /* or any accent color */
+}
+
+.vtTitle::after {
+  content: "";
+  position: absolute;
+  left: 37rem;                   /* aligns with left text padding */
+  bottom: 40px;
+  width: 20%;                    /* shorter underline looks cleaner */
+  height: 4px;
+  background: linear-gradient(90deg, #ff7a00, #ff7a00);
+  border-radius: 2px;
+}
+
+.vtPlayerWrap{
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 14px 40px rgba(0,0,0,.18);
+}
+
+.vtPlayer{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.vtNote{
+  margin-top: 1rem;
+  color: #5a6670;
+  font-size: 1rem;
+}
+
+/* ===== Desktops / Laptops: 1201–1440px ===== */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .vtTitle { padding: 2.8rem 8rem; font-size: 2.7rem; }
+  .vtTitle::after { left: 30rem; width: 22%; bottom: 36px; }
+  .vtPlayerWrap { width: 100%; max-width: 960px; }
+}
+
+/* ===== Medium screens: 1025–1200px ===== */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .vtTitle { padding: 2.4rem 6rem; font-size: 2.5rem; }
+  .vtTitle::after { left: 24rem; width: 26%; bottom: 34px; }
+  .vtPlayerWrap { width: 100%; max-width: 880px; }
+}
+
+/* ===== Tablets: 769–1024px ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .vtSection { padding: 3rem 1.25rem; }
+  .vtTitle { padding: 2rem 3rem; font-size: 2.2rem; }
+  .vtTitle::after { left: 12rem; width: 34%; bottom: 28px; }
+  .vtPlayerWrap { width: 100%; max-width: 760px; }
+}
+
+/* ===== Phones (large): 481–768px ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .vtTitle { padding: 1.5rem 1.25rem; font-size: 1.9rem;}
+  .vtTitle::after {
+    left: 1.25rem;          /* align with title's left padding */
+    width: 42%;
+    bottom: 20px;
+    background: transparent; /* hide the line on small sizes */
+  }
+  .vtPlayerWrap { width: 100%; max-width: 640px; }
+  .vtNote { font-size: 0.95rem; }
+}
+
+/* ===== Phones (small): ≤480px ===== */
+@media (max-width: 480px) {
+  .vtTitle { padding: 1.25rem 1rem; font-size: 1.8rem; }
+  .vtTitle::after {
+    left: 1rem;
+    width: 48%;
+    bottom: 16px;
+    height: 3px;
+    background: transparent; /* transparent line on small phones */
+  }
+  .vtPlayerWrap { width: 100%; max-width: 100%; }
+  .vtNote { font-size: 0.9rem; }
+}
+
+/* ===== Ultra-wide: >1920px (optional) ===== */
+@media (min-width: 1921px) {
+  .vtTitle { padding: 3rem 12rem; font-size: 3.2rem; }
+  .vtTitle::after { left: 41rem; width: 18%; bottom: 42px; }
+  .vtPlayerWrap { width: 100%; max-width: 1100px; }
+}
