@@ -40,6 +40,8 @@ const Partners = () => {
         <img className="logo" src={euLogo} alt="EU" loading="lazy" />
 
         <img className="logo" src={youngooLogo} alt="YOUNGO" loading="lazy" />
+        <img className="logo" src={festivalBleuLogo} alt="Festival Bleu" loading="lazy" />
+
         <img className="logo" src={technoLogo} alt="Techno Stationery" loading="lazy" />
         <img className="logo" src={lcoyLogo} alt="LCOY Algeria" loading="lazy" />
         <img className="logo" src={iomLogo} alt="IOM" loading="lazy" />
@@ -47,7 +49,6 @@ const Partners = () => {
         <img className="logo" src={ccmdLogo} alt="CCMD" loading="lazy" />
         <img className="logo" src={forasKhadraLogo} alt="Foras Khadra" loading="lazy" />
         <img className="logo" src={ITCLogo} alt="ITC" loading="lazy" />
-        <img className="logo" src={festivalBleuLogo} alt="Festival Bleu" loading="lazy" />
         <img className="logo" src={aiesecLogo} alt="Aiesec" loading="lazy" />
         <img className="logo" src={pathosLogo} alt="pathos" loading="lazy" />
 

@@ -42,6 +42,6 @@
 @media (max-width: 768px) {
   .titlePratnersContainer { flex-direction: column; gap: 10px; text-align: center; }
   .left-linePartner, .right-linePartner { display: none; }
-  .Partners-Logo { gap: 16px; }
-  .Partners-Logo .logo { max-height: 70px; }
+  .Partners-Logo { gap: 50px; }
+  .Partners-Logo .logo { max-height: 90px;max-width: 200px; }
 }
