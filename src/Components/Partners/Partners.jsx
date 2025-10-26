@@ -7,7 +7,11 @@ import annaLindLogo from "../../assets/anna-lind.png"
 import youngooLogo from "../../assets/youngoo.png"
 import technoLogo from "../../assets/technoo.png"
 import lcoyLogo from "../../assets/LcoyLogo.png"
+import iomLogo from "../../assets/IOM.jpg"
+import denemarkLogo from "../../assets/denemark.jpg"
+import ccmdLogo from "../../assets/ccmd.png"
 
+import greenGateLogo from "../../assets/greenGate.jpeg"
 
 
 const Partners = () => {
@@ -20,15 +24,20 @@ const Partners = () => {
         <hr className='right-linePartner'></hr>
                     
     </div>
-    <div className='Partners-Logo'>
-        <img src={embassyLogo} alt=""></img>
-        <img src={euroLogo} alt=""></img>
-        <img src={enssmallLogo} alt=""></img>
-        <img src={annaLindLogo} alt=""></img>
-        <img src={youngooLogo} alt=""></img>
-        <img src={technoLogo} alt=""></img>
-        <img src={lcoyLogo} alt=""></img> 
-    </div>
+      <div className="Partners-Logo">
+        <img className="logo" src={embassyLogo} alt="U.S. Embassy Algeria" loading="lazy" />
+        <img className="logo" src={euroLogo} alt="Med Dialogue" loading="lazy" />
+        <img className="logo" src={enssmallLogo} alt="ENSSMAL" loading="lazy" />
+        <img className="logo" src={annaLindLogo} alt="Anna Lindh Foundation" loading="lazy" />
+        <img className="logo" src={youngooLogo} alt="YOUNGO" loading="lazy" />
+        <img className="logo" src={technoLogo} alt="Techno Stationery" loading="lazy" />
+        <img className="logo" src={lcoyLogo} alt="LCOY Algeria" loading="lazy" />
+        <img className="logo" src={iomLogo} alt="IOM" loading="lazy" />
+        <img className="logo" src={denemarkLogo} alt="Denmark Embassy" loading="lazy" />
+        <img className="logo" src={ccmdLogo} alt="CCMD" loading="lazy" />
+        <img className="logo" src={greenGateLogo} alt="Green Gate" loading="lazy" />
+      </div>
+
     </div>
 
   )

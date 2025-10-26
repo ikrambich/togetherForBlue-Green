@@ -6,7 +6,7 @@ import selmaPic from "../../assets/selmaTwo.jpg"
 import aminaPic from "../../assets/amina.jpeg"
 import rayanPic from "../../assets/rayanPic2.jpeg"
 import abdouPic from "../../assets/abdou.jpeg"
-import assiaPic from "../../assets/assia.jpeg"
+import bochraPic from "../../assets/bouchraPic.jpg"
 import anonymous from "../../assets/anonymous.jpg"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -27,8 +27,8 @@ const item_Data=[{
     
         {
         key:3,
-        icon:anonymous,
-        title:"Hiring",
+        icon:bochraPic,
+        title:"Mekhlouf Bochra",
         description:"Media & Communication Department"
             
         },
